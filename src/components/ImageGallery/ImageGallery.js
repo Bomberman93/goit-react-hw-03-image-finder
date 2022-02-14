@@ -1,11 +1,12 @@
 import React from "react";
-
+import styles from "./ImageGallery.module.css"; 
 import ImageGalleryItem from "../ImageGalleryItem/ImageGalleryItem";
 
-const ImageGallery = () => {
+
+const ImageGallery = ({images}) => {
   return (
-    <ul class="gallery">
-      <ImageGalleryItem />
+    <ul className={styles.imageGallery}>
+      {images.map((image => (<ImageGalleryItem key={image.id} image={image}/>)))}
     </ul>
   );
 };

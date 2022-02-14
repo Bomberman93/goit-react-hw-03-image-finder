@@ -1,18 +1,19 @@
 import React from "react";
+import styles from "./Searchbar.module.css";
 
 const Searchbar = () => {
   return (
-    <header class="searchbar">
-      <form class="form">
-        <button type="submit" class="button">
-          <span class="button-label">Search</span>
+    <header className=''>
+      <form className={styles.searchbar}>
+        <button type="submit" className={styles.searchFormButton}>
+          <span className={styles.searchFormButtonLabel}>Search</span>
         </button>
 
         <input
-          class="input"
+          className={styles.searchFormInput}
           type="text"
-          autocomplete="off"
-          autofocus
+          autoComplete="off"
+          autoFocus
           placeholder="Search images and photos"
         />
       </form>
